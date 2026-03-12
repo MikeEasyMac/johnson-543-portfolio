@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="bg-red-700 text-white text-center p-4 text-sm">
-      Copyrighted 2026
+      &copy; 2026 Michael Johnson
     </footer>
   );
 }
