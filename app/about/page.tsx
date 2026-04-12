@@ -1,11 +1,15 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <div className="flex flex-col gap-6">
       <h1 className="text-3xl font-bold">About</h1>
 
-      <img
-        src="https://picsum.photos/600/400"
-        alt="About"
+      <Image
+        src="/AboutMe.JPG"
+        alt="About Me"
+        width={600}
+        height={400}
         className="rounded-lg shadow"
       />
 
