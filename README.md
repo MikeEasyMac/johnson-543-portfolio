@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Michael Johnson — Portfolio Website
 
-## Getting Started
+Designed and developed by Michael Johnson.
 
-First, run the development server:
+A responsive portfolio showcasing my projects, technical skills, and experience as a Computer Science student with a concentration in cybersecurity.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The site presents my work in a clear, professional format and demonstrates my ability to develop and deploy modern web applications.
+
+---
+
+## Live Site
+
+https://johnson-543-portfolio.vercel.app
+
+Repository: https://github.com/MikeEasyMac/johnson-543-portfolio
+
+---
+
+## About This Project
+
+This portfolio was designed and developed to:
+
+- Present real projects in a structured and professional format
+- Demonstrate modern frontend development practices
+- Highlight technical skills and problem-solving ability
+- Provide recruiters and employers with an accessible view of my work
+
+---
+
+## Key Highlights
+
+- Built and deployed a modern portfolio using Next.js App Router and TypeScript  
+- Developed a fully responsive UI using Tailwind CSS for consistent cross-device performance  
+- Structured project content to improve clarity and accessibility for recruiters and hiring managers  
+
+---
+
+## Tech Stack
+
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- Vercel (Deployment)
+
+---
+
+## Features
+
+- Responsive design across desktop and mobile devices
+- Project showcase with structured descriptions
+- Resume viewing in a new browser tab
+- Clean and accessible user interface
+
+---
+
+## Project Structure
+
+```
+app/            Pages and routing (Next.js App Router)
+components/     Reusable UI components
+layout/         Layout elements (header, footer, sidebar)
+pages/api/      API route structure
+public/         Static assets (images, resume)
+library/        Utility and configuration files
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Resume
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+https://johnson-543-portfolio.vercel.app/resume.pdf
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Running Locally
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+git clone https://github.com/MikeEasyMac/johnson-543-portfolio.git
+cd johnson-543-portfolio
+```
 
-## Deploy on Vercel
+Install dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+npm install
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Run the development server:
+
+```
+npm run dev
+```
+
+Open in your browser:
+
+```
+http://localhost:3000
+```
+
+---
+
+## Notes
+
+- All project descriptions reflect technologies actually used in the application
+- Resume opens in a new tab for improved usability
+- Built with a focus on clarity, maintainability, and performance
+
+---
+
+## Author
+
+Michael Johnson  
+Computer Science (Cybersecurity Concentration)  
+Southern Connecticut State University  
+
+---
+
+## Contact
+
+GitHub: https://github.com/MikeEasyMac
+LinkedIn: https://www.linkedin.com/in/michael-johnson-cybersecurity
+
+---
+
+## Final Note
+
+This portfolio was developed to provide a clear and professional representation of my technical abilities, projects, and growth as a software developer and cybersecurity-focused computer science student.
