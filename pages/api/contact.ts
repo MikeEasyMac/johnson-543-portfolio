@@ -1,19 +1,7 @@
-import { NextApiRequest, NextApiResponse } from "next";
-
-/*
-  Contact Form API — POST /api/contact
-  ─────────────────────────────────────
-  Validates incoming form submissions. Currently logs to the console.
-  To wire up a real email provider, follow the TODO block below.
-
-  Required environment variables (see .env.example):
-    CONTACT_TO_EMAIL — the address that receives form submissions
-
-  Optional (provider-specific — add whichever you choose):
-    RESEND_API_KEY       — if using Resend
-    SENDGRID_API_KEY     — if using SendGrid
-    SMTP_HOST / SMTP_PORT / SMTP_USER / SMTP_PASS — if using Nodemailer
-*/
+import { NextApiRequest, NextApiResponse } from 'next';
+import dbConnect from '@/library/db';
+import ContactMessage from '@/models/contactMessage';
+import { sendContactEmail } from '@/library/email';
 
 type ContactPayload = {
   name: string;
@@ -30,51 +18,48 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseBody>
 ) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ message: "Method not allowed" });
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Method not allowed' });
   }
 
   const { name, email, subject, message } = req.body as ContactPayload;
 
-  // Server-side validation
   if (!name?.trim() || !email?.trim() || !subject?.trim() || !message?.trim()) {
-    return res.status(400).json({ message: "All fields are required" });
+    return res.status(400).json({ message: 'All fields are required' });
   }
 
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return res.status(400).json({ message: "Invalid email address" });
+    return res.status(400).json({ message: 'Invalid email address' });
   }
 
   if (message.trim().length < 20) {
-    return res
-      .status(400)
-      .json({ message: "Message must be at least 20 characters" });
+    return res.status(400).json({ message: 'Message must be at least 20 characters' });
   }
 
-  // ─────────────────────────────────────────────────────────────────
-  // TODO: Replace the console.log below with a real email send call.
-  //
-  // Example using Resend:
-  //   import { Resend } from "resend";
-  //   const resend = new Resend(process.env.RESEND_API_KEY);
-  //   await resend.emails.send({
-  //     from: process.env.CONTACT_FROM_EMAIL!,
-  //     to:   process.env.CONTACT_TO_EMAIL!,
-  //     subject: `[Portfolio Contact] ${subject}`,
-  //     text: `From: ${name} <${email}>\n\n${message}`,
-  //   });
-  //
-  // Example using SendGrid:
-  //   import sgMail from "@sendgrid/mail";
-  //   sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
-  //   await sgMail.send({
-  //     from: process.env.CONTACT_FROM_EMAIL!,
-  //     to:   process.env.CONTACT_TO_EMAIL!,
-  //     subject: `[Portfolio Contact] ${subject}`,
-  //     text: `From: ${name} <${email}>\n\n${message}`,
-  //   });
-  // ─────────────────────────────────────────────────────────────────
-  console.log("[Contact Form Submission]", { name, email, subject, message });
+  if (name.trim().length > 100) {
+    return res.status(400).json({ message: 'Name must be 100 characters or fewer' });
+  }
 
-  return res.status(200).json({ message: "Message received successfully" });
+  if (subject.trim().length > 200) {
+    return res.status(400).json({ message: 'Subject must be 200 characters or fewer' });
+  }
+
+  if (message.trim().length > 5000) {
+    return res.status(400).json({ message: 'Message must be 5000 characters or fewer' });
+  }
+
+  try {
+    await dbConnect();
+    await ContactMessage.create({ name: name.trim(), email: email.trim(), subject: subject.trim(), message: message.trim() });
+  } catch {
+    return res.status(500).json({ message: 'Failed to save your message. Please try again.' });
+  }
+
+  try {
+    await sendContactEmail({ name, email, subject, message });
+  } catch (err) {
+    console.warn('[contact] Email notification failed:', err instanceof Error ? err.message : err);
+  }
+
+  return res.status(200).json({ message: 'Message received successfully' });
 }
