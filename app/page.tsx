@@ -5,7 +5,7 @@ import { FaAnchor, FaShieldAlt, FaCode, FaGithub, FaDownload } from "react-icons
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Portfolio of Michael Johnson — Computer Science Senior and M.S. Candidate in Cybersecurity at Southern Connecticut State University, U.S. Navy veteran, and full-stack developer.",
+    "Portfolio of Michael Johnson — M.S. in Cybersecurity candidate and B.S. in Computer Science graduate of Southern Connecticut State University, U.S. Navy veteran, and full-stack developer.",
 };
 
 const featuredProjects = [
@@ -41,13 +41,13 @@ export default function Home() {
           Michael Johnson
         </h1>
         <p className="text-lg text-red-700 dark:text-red-300 font-medium mb-5">
-          Computer Science Senior &middot; M.S. Candidate &middot; Cybersecurity &middot; U.S. Navy Veteran
+          M.S. Cybersecurity Candidate &middot; B.S. Computer Science &middot; U.S. Navy Veteran
         </p>
 
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-2xl mb-7">
-          U.S. Navy veteran and Computer Science senior at Southern Connecticut State University,
-          concentrating in Cybersecurity and pursuing an accelerated Master&apos;s degree in the same
-          field. I build full-stack web applications and cybersecurity systems, and I bring the
+          U.S. Navy veteran and graduate student at Southern Connecticut State University, pursuing
+          an M.S. in Cybersecurity after earning my B.S. in Computer Science with a concentration in
+          Cybersecurity. I build full-stack web applications and cybersecurity systems, and I bring the
           discipline, precision, and ownership mindset of someone who has worked in
           mission-critical environments. Actively seeking roles in software engineering,
           full-stack development, and cybersecurity.

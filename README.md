@@ -1,6 +1,6 @@
 # Michael Johnson — Portfolio Website
 
-A responsive portfolio website showcasing projects, technical skills, and experience as a Computer Science student with a concentration in Cybersecurity at Southern Connecticut State University.
+A responsive portfolio website showcasing projects, technical skills, and experience as a B.S. in Computer Science graduate (Cybersecurity concentration) and current M.S. in Cybersecurity student at Southern Connecticut State University.
 
 The site was built to present technical work in a professional and accessible format while demonstrating modern web development practices.
 

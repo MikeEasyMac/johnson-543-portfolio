@@ -5,7 +5,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Michael Johnson — open to software engineering, full-stack development, and cybersecurity roles. U.S. Navy veteran and Computer Science Senior at SCSU.",
+    "Get in touch with Michael Johnson — open to software engineering, full-stack development, and cybersecurity roles. U.S. Navy veteran, B.S. in Computer Science graduate, and M.S. in Cybersecurity candidate at SCSU.",
 };
 
 const contactInfo = [

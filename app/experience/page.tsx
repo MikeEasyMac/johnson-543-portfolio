@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "Work history, education, and technical skills of Michael Johnson — U.S. Navy Sonar Technician and Computer Science Senior at Southern Connecticut State University.",
+    "Work history, education, and technical skills of Michael Johnson — U.S. Navy Sonar Technician, B.S. in Computer Science graduate, and M.S. in Cybersecurity candidate at Southern Connecticut State University.",
 };
 
 type ExperienceEntry = {
@@ -32,12 +32,12 @@ const experiences: ExperienceEntry[] = [
     icon: <FaAnchor />,
   },
   {
-    title: "B.S. Computer Science · Accelerated M.S. in Cybersecurity",
+    title: "M.S. Cybersecurity · B.S. Computer Science",
     org: "Southern Connecticut State University",
     period: "2023 – Spring 2026 (B.S.) · Fall 2027 (M.S.)",
     highlights: [
-      "Pursuing B.S. in Computer Science, Cybersecurity Concentration — expected Spring 2026",
-      "Enrolled in accelerated M.S. in Cybersecurity pathway — expected Spring 2027",
+      "Earned B.S. in Computer Science, Cybersecurity Concentration — Spring 2026",
+      "Pursuing M.S. in Cybersecurity through the accelerated pathway — expected Spring 2027",
       "Completed project work in full-stack web development, cybersecurity, cloud systems, and AI-integrated applications",
       "Relevant coursework: Web Application Development, Network Security, Cryptography, Database Systems",
       "Member of Kappa Alpha Psi Fraternity, Inc.",

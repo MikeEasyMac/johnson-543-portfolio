@@ -5,7 +5,7 @@ import { FaAnchor, FaGraduationCap, FaShieldAlt, FaDownload } from "react-icons/
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About Michael Johnson — U.S. Navy veteran, Computer Science Senior and M.S. Candidate in Cybersecurity at Southern Connecticut State University.",
+    "About Michael Johnson — U.S. Navy veteran, M.S. in Cybersecurity candidate and B.S. in Computer Science graduate of Southern Connecticut State University.",
 };
 
 export default function About() {
@@ -28,14 +28,14 @@ export default function About() {
               Michael Johnson
             </h2>
             <p className="text-red-700 dark:text-red-300 font-medium mt-1">
-              Computer Science Senior &middot; M.S. Candidate &middot; Cybersecurity &middot; U.S. Navy Veteran
+              M.S. Cybersecurity Candidate &middot; B.S. Computer Science &middot; U.S. Navy Veteran
             </p>
           </div>
 
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base">
-            I&apos;m a U.S. Navy veteran and Computer Science senior at Southern Connecticut State
-            University, where I&apos;m concentrating in Cybersecurity and pursuing an accelerated
-            Master&apos;s degree in the same field. I served as a Sonar Technician in the United
+            I&apos;m a U.S. Navy veteran and a graduate student at Southern Connecticut State
+            University, where I earned my B.S. in Computer Science with a concentration in
+            Cybersecurity and am now pursuing my M.S. in Cybersecurity. I served as a Sonar Technician in the United
             States Navy, working in mission-critical environments where precision, teamwork,
             and consistent performance were non-negotiable every day.
           </p>
@@ -81,8 +81,8 @@ export default function About() {
           <FaGraduationCap className="text-red-700 dark:text-red-300 text-2xl mb-3" />
           <h3 className="font-semibold mb-2">Education</h3>
           <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-            B.S. in Computer Science, Cybersecurity Concentration — Southern Connecticut State
-            University (currently enrolled). Also pursuing an accelerated M.S. in Cybersecurity.
+            M.S. in Cybersecurity (in progress) and B.S. in Computer Science, Cybersecurity
+            Concentration — Southern Connecticut State University.
             Built projects across full-stack development, cybersecurity, cloud, and AI-integrated
             systems. Provided tutoring and mentorship to fellow students.
           </p>

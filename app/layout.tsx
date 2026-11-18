@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Michael Johnson",
   },
   description:
-    "Portfolio of Michael Johnson — Computer Science Senior and M.S. Candidate in Cybersecurity at Southern Connecticut State University, U.S. Navy veteran, and full-stack developer.",
+    "Portfolio of Michael Johnson — M.S. in Cybersecurity candidate and B.S. in Computer Science graduate of Southern Connecticut State University, U.S. Navy veteran, and full-stack developer.",
 };
 
 export default function RootLayout({
