@@ -34,7 +34,7 @@ const experiences: ExperienceEntry[] = [
   {
     title: "B.S. Computer Science · Accelerated M.S. in Cybersecurity",
     org: "Southern Connecticut State University",
-    period: "2023 – Spring 2027 (Expected)",
+    period: "2023 – Spring 2026 (B.S.) · Fall 2027 (M.S.)",
     highlights: [
       "Pursuing B.S. in Computer Science, Cybersecurity Concentration — expected Spring 2026",
       "Enrolled in accelerated M.S. in Cybersecurity pathway — expected Spring 2027",
@@ -90,7 +90,7 @@ export default function Experience() {
               <div className="flex-1 min-w-0">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-1">
                   <h3 className="font-bold text-lg leading-snug">{entry.title}</h3>
-                  <span className="text-sm text-gray-500 dark:text-gray-400 shrink-0 sm:text-right">
+                  <span className="text-sm text-gray-500 dark:text-gray-300 shrink-0 sm:text-right">
                     {entry.period}
                   </span>
                 </div>

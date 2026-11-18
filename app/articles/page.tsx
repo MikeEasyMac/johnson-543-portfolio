@@ -41,7 +41,7 @@ export default async function Articles() {
 
       {articles.length === 0 ? (
         <div className="bg-white dark:bg-gray-700 rounded-lg shadow p-10 flex items-center justify-center">
-          <p className="text-gray-500 dark:text-gray-400 text-sm text-center">
+          <p className="text-gray-500 dark:text-gray-300 text-sm text-center">
             Technical articles and write-ups will be added here soon.
           </p>
         </div>
