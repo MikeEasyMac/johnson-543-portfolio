@@ -37,7 +37,7 @@ const experiences: ExperienceEntry[] = [
     period: "2023 – Spring 2026 (B.S.) · Fall 2027 (M.S.)",
     highlights: [
       "Earned B.S. in Computer Science, Cybersecurity Concentration — Spring 2026",
-      "Pursuing M.S. in Cybersecurity through the accelerated pathway — expected Spring 2027",
+      "Pursuing M.S. in Cybersecurity through the accelerated pathway — expected Fall 2027",
       "Completed project work in full-stack web development, cybersecurity, cloud systems, and AI-integrated applications",
       "Relevant coursework: Web Application Development, Network Security, Cryptography, Database Systems",
       "Member of Kappa Alpha Psi Fraternity, Inc.",
