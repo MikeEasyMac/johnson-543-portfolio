@@ -50,7 +50,6 @@ export default function Aside() {
               target={href.startsWith("mailto") ? undefined : "_blank"}
               rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
               className="flex items-start gap-2 text-xs hover:text-red-700 dark:hover:text-red-400 transition leading-snug"
-              aria-label={label}
             >
               <Icon className="shrink-0 text-sm mt-0.5" />
               <span className="break-all">{display}</span>

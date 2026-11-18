@@ -58,7 +58,6 @@ export default function Contact() {
                   target={href.startsWith("mailto") ? undefined : "_blank"}
                   rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
                   className="flex items-center gap-3 text-sm hover:text-red-700 dark:hover:text-red-400 transition"
-                  aria-label={label}
                 >
                   <Icon className="text-red-700 dark:text-red-300 shrink-0" />
                   <span className="break-all">{display}</span>
