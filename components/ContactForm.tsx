@@ -93,7 +93,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-1">
-            Name <span className="text-red-500">*</span>
+            Name <span className="text-red-700 dark:text-red-300">*</span>
           </label>
           <input
             id="name"
@@ -105,12 +105,12 @@ export default function ContactForm() {
             className={fieldClass("name")}
           />
           {errors.name && (
-            <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+            <p className="text-red-700 dark:text-red-300 text-xs mt-1">{errors.name}</p>
           )}
         </div>
         <div>
           <label htmlFor="email" className="block text-sm font-medium mb-1">
-            Email <span className="text-red-500">*</span>
+            Email <span className="text-red-700 dark:text-red-300">*</span>
           </label>
           <input
             id="email"
@@ -122,14 +122,14 @@ export default function ContactForm() {
             className={fieldClass("email")}
           />
           {errors.email && (
-            <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+            <p className="text-red-700 dark:text-red-300 text-xs mt-1">{errors.email}</p>
           )}
         </div>
       </div>
 
       <div>
         <label htmlFor="subject" className="block text-sm font-medium mb-1">
-          Subject <span className="text-red-500">*</span>
+          Subject <span className="text-red-700 dark:text-red-300">*</span>
         </label>
         <input
           id="subject"
@@ -141,13 +141,13 @@ export default function ContactForm() {
           className={fieldClass("subject")}
         />
         {errors.subject && (
-          <p className="text-red-500 text-xs mt-1">{errors.subject}</p>
+          <p className="text-red-700 dark:text-red-300 text-xs mt-1">{errors.subject}</p>
         )}
       </div>
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium mb-1">
-          Message <span className="text-red-500">*</span>
+          Message <span className="text-red-700 dark:text-red-300">*</span>
         </label>
         <textarea
           id="message"
@@ -159,7 +159,7 @@ export default function ContactForm() {
           className={fieldClass("message")}
         />
         {errors.message && (
-          <p className="text-red-500 text-xs mt-1">{errors.message}</p>
+          <p className="text-red-700 dark:text-red-300 text-xs mt-1">{errors.message}</p>
         )}
       </div>
 
