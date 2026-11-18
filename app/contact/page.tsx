@@ -60,7 +60,7 @@ export default function Contact() {
                   className="flex items-center gap-3 text-sm hover:text-red-700 dark:hover:text-red-400 transition"
                   aria-label={label}
                 >
-                  <Icon className="text-red-700 dark:text-red-400 shrink-0" />
+                  <Icon className="text-red-700 dark:text-red-300 shrink-0" />
                   <span className="break-all">{display}</span>
                 </a>
               ))}

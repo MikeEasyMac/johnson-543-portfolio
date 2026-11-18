@@ -84,7 +84,7 @@ export default function Experience() {
               key={i}
               className="bg-white dark:bg-gray-700 rounded-lg shadow p-6 flex gap-4"
             >
-              <div className="text-red-700 dark:text-red-400 text-2xl mt-1 shrink-0">
+              <div className="text-red-700 dark:text-red-300 text-2xl mt-1 shrink-0">
                 {entry.icon}
               </div>
               <div className="flex-1 min-w-0">
@@ -94,7 +94,7 @@ export default function Experience() {
                     {entry.period}
                   </span>
                 </div>
-                <p className="text-red-700 dark:text-red-400 text-sm font-medium mb-3">
+                <p className="text-red-700 dark:text-red-300 text-sm font-medium mb-3">
                   {entry.org}
                 </p>
                 <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1.5 leading-relaxed">

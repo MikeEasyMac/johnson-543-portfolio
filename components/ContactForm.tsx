@@ -78,7 +78,7 @@ export default function ContactForm() {
         </p>
         <button
           onClick={() => setStatus("idle")}
-          className="text-red-700 dark:text-red-400 hover:underline text-sm"
+          className="text-red-700 dark:text-red-300 hover:underline text-sm"
         >
           Send another message
         </button>
@@ -164,7 +164,7 @@ export default function ContactForm() {
       </div>
 
       {status === "error" && (
-        <p className="text-red-600 dark:text-red-400 text-sm">
+        <p className="text-red-600 dark:text-red-300 text-sm">
           Something went wrong. Please try again or reach out directly via email.
         </p>
       )}

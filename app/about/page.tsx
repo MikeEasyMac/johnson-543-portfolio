@@ -27,7 +27,7 @@ export default function About() {
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
               Michael Johnson
             </h2>
-            <p className="text-red-700 dark:text-red-400 font-medium mt-1">
+            <p className="text-red-700 dark:text-red-300 font-medium mt-1">
               Computer Science Senior &middot; M.S. Candidate &middot; Cybersecurity &middot; U.S. Navy Veteran
             </p>
           </div>
@@ -68,7 +68,7 @@ export default function About() {
       {/* Background cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-white dark:bg-gray-700 rounded-lg shadow p-6">
-          <FaAnchor className="text-red-700 dark:text-red-400 text-2xl mb-3" />
+          <FaAnchor className="text-red-700 dark:text-red-300 text-2xl mb-3" />
           <h3 className="font-semibold mb-2">Military Service</h3>
           <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
             Served as a Sonar Technician in the United States Navy. Worked in mission-critical
@@ -78,7 +78,7 @@ export default function About() {
           </p>
         </div>
         <div className="bg-white dark:bg-gray-700 rounded-lg shadow p-6">
-          <FaGraduationCap className="text-red-700 dark:text-red-400 text-2xl mb-3" />
+          <FaGraduationCap className="text-red-700 dark:text-red-300 text-2xl mb-3" />
           <h3 className="font-semibold mb-2">Education</h3>
           <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
             B.S. in Computer Science, Cybersecurity Concentration — Southern Connecticut State
@@ -88,7 +88,7 @@ export default function About() {
           </p>
         </div>
         <div className="bg-white dark:bg-gray-700 rounded-lg shadow p-6">
-          <FaShieldAlt className="text-red-700 dark:text-red-400 text-2xl mb-3" />
+          <FaShieldAlt className="text-red-700 dark:text-red-300 text-2xl mb-3" />
           <h3 className="font-semibold mb-2">Core Values</h3>
           <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
             Integrity, accountability, and continuous improvement — values shaped by military

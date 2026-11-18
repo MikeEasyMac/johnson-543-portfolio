@@ -85,7 +85,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-sm text-red-700 dark:text-red-400 hover:underline"
+              className="flex items-center gap-1.5 text-sm text-red-700 dark:text-red-300 hover:underline"
             >
               <FaGithub /> GitHub
             </a>
@@ -95,7 +95,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-sm text-red-700 dark:text-red-400 hover:underline"
+              className="flex items-center gap-1.5 text-sm text-red-700 dark:text-red-300 hover:underline"
             >
               <FaExternalLinkAlt /> Live Demo
             </a>

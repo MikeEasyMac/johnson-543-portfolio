@@ -40,7 +40,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2 leading-tight">
           Michael Johnson
         </h1>
-        <p className="text-lg text-red-700 dark:text-red-400 font-medium mb-5">
+        <p className="text-lg text-red-700 dark:text-red-300 font-medium mb-5">
           Computer Science Senior &middot; M.S. Candidate &middot; Cybersecurity &middot; U.S. Navy Veteran
         </p>
 
@@ -62,7 +62,7 @@ export default function Home() {
           </Link>
           <Link
             href="/experience"
-            className="border border-red-700 text-red-700 dark:text-red-400 dark:border-red-400 px-5 py-2.5 rounded hover:bg-red-50 dark:hover:bg-gray-600 transition text-sm font-medium"
+            className="border border-red-700 text-red-700 dark:text-red-300 dark:border-red-400 px-5 py-2.5 rounded hover:bg-red-50 dark:hover:bg-gray-600 transition text-sm font-medium"
           >
             My Experience
           </Link>
@@ -89,7 +89,7 @@ export default function Home() {
         <h2 className="text-xl font-bold mb-4">What I Bring</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="bg-white dark:bg-gray-700 rounded-lg shadow p-6">
-            <FaAnchor className="text-red-700 dark:text-red-400 text-2xl mb-3" />
+            <FaAnchor className="text-red-700 dark:text-red-300 text-2xl mb-3" />
             <h3 className="font-semibold mb-2">Navy Veteran</h3>
             <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
               Served as a Sonar Technician aboard U.S. Navy submarines. Brings leadership,
@@ -97,7 +97,7 @@ export default function Home() {
             </p>
           </div>
           <div className="bg-white dark:bg-gray-700 rounded-lg shadow p-6">
-            <FaShieldAlt className="text-red-700 dark:text-red-400 text-2xl mb-3" />
+            <FaShieldAlt className="text-red-700 dark:text-red-300 text-2xl mb-3" />
             <h3 className="font-semibold mb-2">Cybersecurity Focus</h3>
             <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
               Concentrating in cybersecurity with coursework in network security, cryptography,
@@ -105,7 +105,7 @@ export default function Home() {
             </p>
           </div>
           <div className="bg-white dark:bg-gray-700 rounded-lg shadow p-6">
-            <FaCode className="text-red-700 dark:text-red-400 text-2xl mb-3" />
+            <FaCode className="text-red-700 dark:text-red-300 text-2xl mb-3" />
             <h3 className="font-semibold mb-2">Full-Stack Developer</h3>
             <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
               Building modern web applications with Next.js, React, TypeScript, MongoDB,
@@ -121,7 +121,7 @@ export default function Home() {
           <h2 className="text-xl font-bold">Featured Projects</h2>
           <Link
             href="/projects"
-            className="text-red-700 dark:text-red-400 hover:underline text-sm font-medium"
+            className="text-red-700 dark:text-red-300 hover:underline text-sm font-medium"
           >
             View all &rarr;
           </Link>
@@ -151,7 +151,7 @@ export default function Home() {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-xs text-red-700 dark:text-red-400 hover:underline w-fit"
+                  className="flex items-center gap-1.5 text-xs text-red-700 dark:text-red-300 hover:underline w-fit"
                 >
                   <FaGithub /> View on GitHub
                 </a>
