@@ -39,7 +39,7 @@ export default function Aside() {
     <div className="w-52 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-5 flex flex-col gap-6 shrink-0 border-r border-gray-200 dark:border-gray-700">
       {/* Connect */}
       <div>
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-400 mb-3">
           Connect
         </h2>
         <div className="flex flex-col gap-2">
@@ -61,7 +61,7 @@ export default function Aside() {
 
       {/* Skills */}
       <div>
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-400 mb-3">
           Skills
         </h2>
         <div className="flex flex-wrap gap-1">
@@ -78,7 +78,7 @@ export default function Aside() {
 
       {/* Open To */}
       <div>
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-400 mb-2">
           Open To
         </h2>
         <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-1 leading-relaxed">
