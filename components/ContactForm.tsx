@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, useEffect, useRef, ChangeEvent, FormEvent } from "react";
 
 type FormData = {
   name: string;
@@ -17,6 +17,12 @@ export default function ContactForm() {
   const [form, setForm] = useState<FormData>(emptyForm);
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errors, setErrors] = useState<Partial<FormData>>({});
+  const successHeadingRef = useRef<HTMLHeadingElement>(null);
+
+  // Move focus to the confirmation so screen reader users hear that the message was sent
+  useEffect(() => {
+    if (status === "success") successHeadingRef.current?.focus();
+  }, [status]);
 
   const validate = (): boolean => {
     const next: Partial<FormData> = {};
@@ -33,6 +39,9 @@ export default function ContactForm() {
       next.message = "Message must be at least 20 characters";
     }
     setErrors(next);
+    // Send keyboard and screen reader users to the first field that needs fixing
+    const firstInvalid = Object.keys(next)[0];
+    if (firstInvalid) document.getElementById(firstInvalid)?.focus();
     return Object.keys(next).length === 0;
   };
 
@@ -70,9 +79,9 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="flex flex-col items-center justify-center py-10 text-center">
-        <div className="text-green-500 text-5xl mb-4">✓</div>
-        <h2 className="text-xl font-semibold mb-2">Message Sent!</h2>
+      <div role="status" className="flex flex-col items-center justify-center py-10 text-center">
+        <div className="text-green-500 text-5xl mb-4" aria-hidden="true">✓</div>
+        <h2 ref={successHeadingRef} tabIndex={-1} className="text-xl font-semibold mb-2 focus:outline-none">Message Sent!</h2>
         <p className="text-gray-600 dark:text-gray-400 text-sm mb-5">
           Thank you for reaching out. I&apos;ll get back to you as soon as possible.
         </p>
@@ -93,11 +102,14 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-1">
-            Name <span className="text-red-700 dark:text-red-300">*</span>
+            Name <span className="text-red-700 dark:text-red-300" aria-hidden="true">*</span>
           </label>
           <input
             id="name"
             name="name"
+            aria-required="true"
+            aria-invalid={!!errors.name}
+            aria-describedby={errors.name ? "name-error" : undefined}
             type="text"
             value={form.name}
             onChange={handleChange}
@@ -105,16 +117,19 @@ export default function ContactForm() {
             className={fieldClass("name")}
           />
           {errors.name && (
-            <p className="text-red-700 dark:text-red-300 text-xs mt-1">{errors.name}</p>
+            <p id="name-error" className="text-red-700 dark:text-red-300 text-xs mt-1">{errors.name}</p>
           )}
         </div>
         <div>
           <label htmlFor="email" className="block text-sm font-medium mb-1">
-            Email <span className="text-red-700 dark:text-red-300">*</span>
+            Email <span className="text-red-700 dark:text-red-300" aria-hidden="true">*</span>
           </label>
           <input
             id="email"
             name="email"
+            aria-required="true"
+            aria-invalid={!!errors.email}
+            aria-describedby={errors.email ? "email-error" : undefined}
             type="email"
             value={form.email}
             onChange={handleChange}
@@ -122,18 +137,21 @@ export default function ContactForm() {
             className={fieldClass("email")}
           />
           {errors.email && (
-            <p className="text-red-700 dark:text-red-300 text-xs mt-1">{errors.email}</p>
+            <p id="email-error" className="text-red-700 dark:text-red-300 text-xs mt-1">{errors.email}</p>
           )}
         </div>
       </div>
 
       <div>
         <label htmlFor="subject" className="block text-sm font-medium mb-1">
-          Subject <span className="text-red-700 dark:text-red-300">*</span>
+          Subject <span className="text-red-700 dark:text-red-300" aria-hidden="true">*</span>
         </label>
         <input
           id="subject"
           name="subject"
+          aria-required="true"
+          aria-invalid={!!errors.subject}
+          aria-describedby={errors.subject ? "subject-error" : undefined}
           type="text"
           value={form.subject}
           onChange={handleChange}
@@ -141,17 +159,20 @@ export default function ContactForm() {
           className={fieldClass("subject")}
         />
         {errors.subject && (
-          <p className="text-red-700 dark:text-red-300 text-xs mt-1">{errors.subject}</p>
+          <p id="subject-error" className="text-red-700 dark:text-red-300 text-xs mt-1">{errors.subject}</p>
         )}
       </div>
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium mb-1">
-          Message <span className="text-red-700 dark:text-red-300">*</span>
+          Message <span className="text-red-700 dark:text-red-300" aria-hidden="true">*</span>
         </label>
         <textarea
           id="message"
           name="message"
+          aria-required="true"
+          aria-invalid={!!errors.message}
+          aria-describedby={errors.message ? "message-error" : undefined}
           rows={5}
           value={form.message}
           onChange={handleChange}
@@ -159,12 +180,12 @@ export default function ContactForm() {
           className={fieldClass("message")}
         />
         {errors.message && (
-          <p className="text-red-700 dark:text-red-300 text-xs mt-1">{errors.message}</p>
+          <p id="message-error" className="text-red-700 dark:text-red-300 text-xs mt-1">{errors.message}</p>
         )}
       </div>
 
       {status === "error" && (
-        <p className="text-red-600 dark:text-red-300 text-sm">
+        <p role="alert" className="text-red-600 dark:text-red-300 text-sm">
           Something went wrong. Please try again or reach out directly via email.
         </p>
       )}
